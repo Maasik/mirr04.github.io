@@ -24,11 +24,12 @@ var map = new L.Map('map', {center: new L.LatLng(56.011881,92.864294), zoom:15, 
 var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 var yndx = new L.Yandex();
 var googleLayer = new L.Google('ROADMAP');
-var mylayer = new L.TileLayer('mylayer3/{z}/{x}/{y}.jpg');
+var mainMap = new L.TileLayer('http://velios.myjino.ru/maptiles/main/{z}/{x}/{y}.jpg');
+var universiadaMap  = new L.TileLayer('http://velios.myjino.ru/maptiles/universiada/{z}/{x}/{y}.jpg');
 
 map.addLayer(osm);
 
-map.addControl(new L.Control.Layers({'OSM':osm, "Yandex":yndx, "Google":googleLayer, "My":mylayer}));
+map.addControl(new L.Control.Layers({'OSM':osm, "Yandex":yndx, "Google":googleLayer, "Основной чертеж":mainMap, "Универсиада":universiadaMap}));
 
 </script>
  
